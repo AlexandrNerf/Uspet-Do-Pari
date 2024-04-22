@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmbgccfw52ixx"]
+
+[ext_resource type="Texture2D" uid="uid://db80pt1d6usb0" path="res://Forest/Sprites/Addition/Snow_mini_wall_2 (1).png" id="1_gx7vt"]
+
+[node name="Wl" type="CollisionPolygon2D"]
+z_index = 2
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-4, -10, -8, -1, -12, 5, -11, 8, -6, 10, -2, 12, 3, 11, 7, 11, 10, 9, 12, 7, 11, 1, 10, -4, 8, -7, 6, -8, 4, -6, 2, -9, 1, -11, -3, -11)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+texture = ExtResource("1_gx7vt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-2, -12, -7, -4, -12, 5, -11, 8, -7, 9, -3, 11, 1, 11, 3, 10, 6, 11, 8, 10, 12, 7, 12, 5, 11, -1, 10, -6, 6, -9, 4, -7, 2, -9, 0, -12)
