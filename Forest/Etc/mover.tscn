@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://0i4swjiuf3mm"]
-
-[node name="Mover" type="Area2D" groups=["Next-Lvl"]]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(1, 0, 926, 175, 514, 313, -361, 138)
