@@ -48,3 +48,5 @@ On each branch you can see different versions of the game.
 ### To start game you will need a python 3.x. Make sure you have it installed.
 
 To start - go to folder RELEASE and run ***server.py*** and then go to ***localhost:8000*** and run game with file ***USPET_DO_PARI.html***
+
+For more information go to branches with actual version
