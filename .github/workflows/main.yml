@@ -5,7 +5,6 @@ on:
     branches:
       - '1.1v'
 jobs:
-  test:
     build:
       runs-on: ubuntu-latest
       steps:
@@ -14,4 +13,5 @@ jobs:
           with:
             python-version: '3.x'
         - uses: jannekem/run-python-script-action@v1
-        - run: cd RELEASE && server.py
+        - name: MAIN
+          run: cd RELEASE && server.py
