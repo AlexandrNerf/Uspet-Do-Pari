@@ -1,24 +1,45 @@
-name: Test setup-cloudflared
+name: my workflow
+
 on:
   push:
-    paths:
-      - .github/workflows/test.yml
-
+    branches:
+      - '*'
+      - '!master'
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup cloudflared using setup-cloudflared
-        uses: AnimMouse/setup-cloudflared@v1
-        with:
-          cloudflare_tunnel_certificate: ${{ secrets.CLOUDFLARE_TUNNEL_CERTIFICATE }}
-          cloudflare_tunnel_credential: ${{ secrets.CLOUDFLARE_TUNNEL_CREDENTIAL }}
-          cloudflare_tunnel_configuration: ${{ secrets.CLOUDFLARE_TUNNEL_CONFIGURATION }}
-          cloudflare_tunnel_id: ${{ secrets.CLOUDFLARE_TUNNEL_ID }}
-
-      - name: Test cloudflared installed by setup-cloudflared using Python HTTP server for 5 minutes
-        run: timeout 5m python -m http.server 8000 || true
-
-      - name: Shutdown cloudflared using setup-cloudflared/shutdown
-        if: always()
-        uses: AnimMouse/setup-cloudflared/shutdown@v1
+    -
+      name: Checkout code
+      uses: actions/checkout@v4
+    -
+      name: Serve Files
+      uses: Eun/http-server-action@v1
+      with:
+        directory: ${{ github.workspace }}
+        port: 8080
+        no-cache: false
+        index-files: |
+          ["index.html", "index.htm"]
+        allowed-methods: |
+          ["GET", "HEAD"]
+        content-types: |
+          {
+            "appcache": "text/cache-manifest",
+            "css": "text/css",
+            "gif": "image/gif",
+            "html": "text/html",
+            "ico": "image/x-icon",
+            "jpeg": "image/jpeg",
+            "jpg": "image/jpeg",
+            "js": "text/javascript",
+            "json": "application/json",
+            "png": "image/png",
+            "txt": "text/plain",
+            "xml": "text/xml"
+          }
+        log: "log.txt"
+        logTime: "false"
+    -
+      run: |
+        curl -vvvv http://localhost:8080/index.html
