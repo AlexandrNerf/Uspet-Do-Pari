@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsduq1il4ku6p"]
+
+[ext_resource type="Script" path="res://Forest/dead.gd" id="1_v3048"]
+[ext_resource type="FontFile" uid="uid://oxuroxbxnss" path="res://Etc/Fonts/Minecraft Rus NEW.otf" id="3_k8n78"]
+[ext_resource type="AudioStream" uid="uid://cj315mv6ch3p5" path="res://Music/UspetDoPari.mp3" id="3_yyrgc"]
+
+[node name="Dead" type="Node2D"]
+script = ExtResource("1_v3048")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = -214.0
+offset_top = 73.0
+offset_right = 215.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("3_k8n78")
+theme_override_font_sizes/font_size = 50
+text = "В МЕНЮ"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yyrgc")
+
+[node name="Sprite2D" type="Label" parent="."]
+texture_filter = 1
+offset_left = -299.0
+offset_top = -241.0
+offset_right = 299.0
+offset_bottom = -86.0
+theme_override_fonts/font = ExtResource("3_k8n78")
+theme_override_font_sizes/font_size = 70
+text = "ВЫ СДАЛИ!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

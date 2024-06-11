@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bul1iwtk7eono"]
+
+[ext_resource type="Texture2D" uid="uid://cl3g7v7ooidw7" path="res://Etc/Shadows/light.png" id="1_dqrnt"]
+[ext_resource type="Script" path="res://Etc/canvas_modulate.gd" id="1_wm8k5"]
+
+[node name="CanvasModulate" type="CanvasModulate"]
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_wm8k5")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-5.5, 2.5)
+scale = Vector2(1.71, 1)
+energy = 0.87
+range_z_min = -1204
+range_z_max = 1000
+texture = ExtResource("1_dqrnt")
+texture_scale = 0.5
+height = 3.0

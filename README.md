@@ -1,52 +1,28 @@
-# Uspet-Do-Pari v1.1
+# USPET DO PARI v1.1 (working)
 
+# Об устройстве программы
+Так куда тыкать, чтобы увидеть код и прочее?
 
-New game by NSU students about their hard life.
+Для начала структура:
 
-Game genres: roguelike, fantasy, action, pixel, isometric.
+./ - главные сцены и иконки игры.
 
-### Based on GODOT Engine v4.
+Forest и GNU - папки с уровнями, спрайтами и т.д.
 
+Music - музыка.
 
-### All Rights Reserved © 2024 STM "STUDENT TROLLING MACHINE" co. 
+Characters - игровые персонажи.
 
+Monsters - враги.
 
-# Authors: 
+RELEASE - собранная игра.
 
-### Alexandr Varnakin (Back-end)
+## 1. Скрипты
+Все скрипты игры - .gd файлы. Основной сценой игры является node_2d.tscn и её скрипт Game.gd.
+О нём:
+### 1.1. Генерация уровня
+Генерация происходит в функциях, связанных с _ready() - в ней находятся все нужные подфункции для генерации локаций игры.
 
-### Andrew Dutkin (Front-end)
-
-# Duties:
-
-### Game code: Alex.
-
-###  Music: Alex and Andrew. (50/50)
-
-### Graphics, sprites: Andrew.
-
-### Ideas: Alex and Andrew.
-
-# Structure
-
-> To start this game use insturction bellow in module "Start Game".
-
-On each branch you can see different versions of the game. 
-
-### Main scripts of game starting and processing is ***node_2d, presents and main_menu .tscn*** files. 
-
-> Presents and main_menu - game logo and menu.
-
-> node_2d - main game scene moving by ***Game.gd*** script where main game loop is located.
-
-### In folders GNU and Forest main sprites and scripts for levels are located.
-
-### In Characters folder - characters, Music - music and sound effect and etc.
-
-# Start Game
-
-### To start game you will need a python 3.x. Make sure you have it installed.
-
-To start - go to folder RELEASE and run ***server.py*** and then go to ***localhost:8000*** and run game with file ***USPET_DO_PARI.html***
-
-For more information go to branches with actual version
+### 1.2. Обработка (персонажа, врагов и т.д.)
+Вся обработка находится в функциях с подписью process или processing - в них выполняются вычисления, связанные с персонажами, комнатами и т.д.
+В функции _process(delta) - главный игровой цикл.
