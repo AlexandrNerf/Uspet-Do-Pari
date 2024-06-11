@@ -1,9 +1,0 @@
-join AlexandrUntik 1
-AlexandrUntik: Ну вот и всё, мы здесь.
-[signal arg="Camera_Move"]
-leave AlexandrUntik [animation="Slide Out Left"]
-AlexandrUntik: ТЕГОВИР! Вот и он.
-[signal arg="End_Move"]
-join AndreiKulek 3
-AndreiKulek: Пришло время сдать проект!
-[signal arg="Boss_Start"]
