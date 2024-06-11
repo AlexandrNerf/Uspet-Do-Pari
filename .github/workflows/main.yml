@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - '1.1v'
+      - '!master'
 jobs:
   build:
 
