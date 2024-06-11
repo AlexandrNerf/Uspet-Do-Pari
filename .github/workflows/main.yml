@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      - name: Print errors
+      - name: my workflow
         run: cd RELEASE && server.py
