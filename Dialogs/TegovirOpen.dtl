@@ -1,0 +1,12 @@
+join AndreiKulek 3
+AndreiKulek: Фух! Мы наконец-то собрали всё. А Даня так и не явился...
+join AlexandrUntik 1
+AlexandrUntik: Это очень грустно (нет). Пора показать, что может наш проект. Отправляемся в самую жирную аудиторию.
+AndreiKulek: Не то слово
+leave --All--
+Теперь, когда в ваших руках есть два великих артефакта...
+[wait_input hide_text="false"]
+Вы можете сразиться с боссом качалки.
+join AndreiKulek 2
+AndreiKulek: Камон, он максимум боссик. Щас докажем.
+[signal arg="Tegovirish"]

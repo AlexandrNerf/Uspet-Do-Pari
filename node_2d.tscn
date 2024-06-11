@@ -1,0 +1,958 @@
+[gd_scene load_steps=53 format=3 uid="uid://cxtk21i2lroet"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1_rh0f1"]
+[ext_resource type="Texture2D" uid="uid://0gwyh74trty8" path="res://Forest/Sprites/Snow_hiding-Sheet.png" id="2_vclmu"]
+[ext_resource type="Texture2D" uid="uid://domy5n43t1yvg" path="res://GNU/Sprites/Building_hiding_1.png" id="3_q7vad"]
+[ext_resource type="Texture2D" uid="uid://dby5yr7sxc0tj" path="res://Forest/Sprites/Snow_floor_1.png" id="3_x3v2n"]
+[ext_resource type="Texture2D" uid="uid://cxbopvfrvj6b8" path="res://Forest/Sprites/Snow_floor_2.png" id="4_e4l07"]
+[ext_resource type="Texture2D" uid="uid://j4l1yk06ijj5" path="res://Forest/Sprites/Snow_floor_3.png" id="5_ve71k"]
+[ext_resource type="Texture2D" uid="uid://cos6mn8ofysf6" path="res://Forest/Sprites/Snow_floor_4.png" id="6_x0yfs"]
+[ext_resource type="Texture2D" uid="uid://ckf08ha1k5kli" path="res://Forest/Sprites/Snow_wall_1.png" id="6_xf1e4"]
+[ext_resource type="Texture2D" uid="uid://do3xs1030o033" path="res://Forest/Sprites/Snow_wall_2.png" id="7_o14q2"]
+[ext_resource type="Script" path="res://GUI.gd" id="7_wkt74"]
+[ext_resource type="Texture2D" uid="uid://ccuqcsqmq6hhh" path="res://Forest/Sprites/Snow_wall_3.png" id="8_ca44l"]
+[ext_resource type="Texture2D" uid="uid://cv6k7yhr0vlen" path="res://GNU/Sprites/Building_floor_1.png" id="9_6tsjg"]
+[ext_resource type="Texture2D" uid="uid://cnqlquqbbuwpl" path="res://GNU/Sprites/Building_wall_1-Sheet.png" id="10_s26sa"]
+[ext_resource type="FontFile" uid="uid://oxuroxbxnss" path="res://Etc/Fonts/Minecraft Rus NEW.otf" id="11_8te26"]
+[ext_resource type="Texture2D" uid="uid://bbnqocqau7mnh" path="res://GNU/Sprites/Building_door_1_2-Sheet.png" id="12_s6jpo"]
+[ext_resource type="Texture2D" uid="uid://cy23klhu6pxca" path="res://GNU/Sprites/Building_door_1_1-Sheet.png" id="13_ec4q1"]
+[ext_resource type="AudioStream" uid="uid://0r3ckwycxisg" path="res://Music/Cherez Les.mp3" id="14_kkpxa"]
+[ext_resource type="Texture2D" uid="uid://dkpj0yu7urbs8" path="res://Etc/Minimap/blueGem.png" id="14_lhc7a"]
+[ext_resource type="PackedScene" uid="uid://cis8texlachtu" path="res://Characters/AlexandrUtkin/alexandr_utkin.tscn" id="15_avgrh"]
+[ext_resource type="Texture2D" uid="uid://cccfrwwyv8alf" path="res://Etc/GUI/MAIN_WINDOW_Clock.png" id="17_c18ha"]
+[ext_resource type="PackedScene" uid="uid://5r8yl1255ssl" path="res://Characters/AndreiKulek/AndreiKulek.tscn" id="18_7pmwp"]
+[ext_resource type="Texture2D" uid="uid://cel7ongnjm2bg" path="res://Etc/GUI/MAIN_WINDOW_Battery.png" id="18_usvcb"]
+[ext_resource type="Texture2D" uid="uid://bq17j1kp4tvjg" path="res://Etc/GUI/MAIN_WINDOW_Sneakers.png" id="19_iklgu"]
+[ext_resource type="Texture2D" uid="uid://cl3g7v7ooidw7" path="res://Etc/Shadows/light.png" id="20_lhdn5"]
+[ext_resource type="Texture2D" uid="uid://bqa28nyxri512" path="res://Etc/GUI/MAIN_WINDOW_Player.png" id="20_ujpql"]
+[ext_resource type="AudioStream" uid="uid://cj315mv6ch3p5" path="res://Music/UspetDoPari.mp3" id="22_6mddb"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="22_7lci4"]
+[ext_resource type="Texture2D" uid="uid://b3ov5iiqlsqky" path="res://Characters/AlexandrUtkin/Александр Уткин-Sheet.png" id="23_beawo"]
+[ext_resource type="Texture2D" uid="uid://b61mjsbuxofjc" path="res://Etc/FKEY.png" id="23_l8136"]
+[ext_resource type="PackedScene" uid="uid://c13kfx3jxm8m1" path="res://Music/in_game_radio.tscn" id="23_yp6ig"]
+[ext_resource type="Texture2D" uid="uid://cscdqjq28jnk0" path="res://Characters/AndreiKulek/Андрей Кулек-Sheet.png" id="24_lwfpc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e6eqo"]
+texture = ExtResource("2_vclmu")
+texture_region_size = Vector2i(96, 54)
+0:0/animation_columns = 3
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8dun3"]
+texture = ExtResource("3_q7vad")
+texture_region_size = Vector2i(128, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usrkp"]
+texture = ExtResource("3_x3v2n")
+margins = Vector2i(0, 2)
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6fae"]
+texture = ExtResource("4_e4l07")
+margins = Vector2i(0, 2)
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jq75f"]
+texture = ExtResource("5_ve71k")
+margins = Vector2i(0, 2)
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eexm0"]
+texture = ExtResource("6_x0yfs")
+margins = Vector2i(0, 2)
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6k33"]
+texture = ExtResource("6_xf1e4")
+texture_region_size = Vector2i(64, 80)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 22)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 0, 16, 32, 0, 0, -16)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkc8x"]
+texture = ExtResource("7_o14q2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 14)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sal2j"]
+texture = ExtResource("8_ca44l")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 14)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6br4r"]
+texture = ExtResource("9_6tsjg")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hcuy8"]
+texture = ExtResource("10_s26sa")
+texture_region_size = Vector2i(64, 70)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 18)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 18)
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, 18)
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 18)
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, 18)
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 31.0073, 0.496341)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xcs3"]
+texture = ExtResource("12_s6jpo")
+texture_region_size = Vector2i(128, 101)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 32)
+1:0/0/y_sort_origin = -5
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-43.1335, -8.48528, -43.8406, 28.9914, 19.25, -3.5, 20.5061, -41.0122)
+1:1/0 = 0
+1:1/0/y_sort_origin = -18
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(13, -33.5, 13, -1, 20.2, -5.9, 19.5, -39)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, 32)
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-49.5, -58, -49, -20, 13.4, 9.3, 13.5, -25)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 32)
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.71752, -27.5772, 6.71752, 8.83884, 14.8492, 12.3744, 14.8492, -25.4558, 6.01041, -31.4663)
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -41, -21.6, -5.2, 42.5, 27, 44, -7.5)
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.0815, -1.76777, -12.7279, -37.8302, -20.1525, -41.7193, -21.2492, -5.37538)
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+2:7/0 = 0
+2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/0/physics_layer_0/angular_velocity = 0.0
+3:7/0 = 0
+3:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:7/0/physics_layer_0/angular_velocity = 0.0
+0:8/0 = 0
+0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:8/0/physics_layer_0/angular_velocity = 0.0
+1:8/0 = 0
+1:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:8/0/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
+3:8/0 = 0
+3:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:8/0/physics_layer_0/angular_velocity = 0.0
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+1:9/0 = 0
+1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:9/0/physics_layer_0/angular_velocity = 0.0
+2:9/0 = 0
+2:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:9/0/physics_layer_0/angular_velocity = 0.0
+3:9/0 = 0
+3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:9/0/physics_layer_0/angular_velocity = 0.0
+0:10/0 = 0
+0:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:10/0/physics_layer_0/angular_velocity = 0.0
+1:10/0 = 0
+1:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:10/0/physics_layer_0/angular_velocity = 0.0
+2:10/0 = 0
+2:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:10/0/physics_layer_0/angular_velocity = 0.0
+3:10/0 = 0
+3:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:10/0/physics_layer_0/angular_velocity = 0.0
+0:11/0 = 0
+0:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:11/0/physics_layer_0/angular_velocity = 0.0
+1:11/0 = 0
+1:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:11/0/physics_layer_0/angular_velocity = 0.0
+2:11/0 = 0
+2:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:11/0/physics_layer_0/angular_velocity = 0.0
+3:11/0 = 0
+3:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:11/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 32)
+0:0/0/y_sort_origin = -16
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -26, -13.6, 9.2, 50, -20, 49, -57)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcrcf"]
+texture = ExtResource("13_ec4q1")
+texture_region_size = Vector2i(128, 101)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 32)
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/y_sort_origin = -16
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 32)
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+2:7/0 = 0
+2:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:7/0/physics_layer_0/angular_velocity = 0.0
+0:8/0 = 0
+0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:8/0/physics_layer_0/angular_velocity = 0.0
+2:8/0 = 0
+2:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:8/0/physics_layer_0/angular_velocity = 0.0
+0:9/0 = 0
+0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:9/0/physics_layer_0/angular_velocity = 0.0
+2:9/0 = 0
+2:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:9/0/physics_layer_0/angular_velocity = 0.0
+3:9/0 = 0
+3:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:9/0/physics_layer_0/angular_velocity = 0.0
+2:10/0 = 0
+2:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:10/0/physics_layer_0/angular_velocity = 0.0
+3:10/0 = 0
+3:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:10/0/physics_layer_0/angular_velocity = 0.0
+2:11/0 = 0
+2:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:11/0/physics_layer_0/angular_velocity = 0.0
+3:11/0 = 0
+3:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:11/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 32)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, 32)
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_3ls76"]
+tile_shape = 1
+tile_size = Vector2i(64, 32)
+occlusion_layer_0/light_mask = 1
+occlusion_layer_0/sdf_collision = true
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 7
+navigation_layer_1/layers = 1
+sources/30 = SubResource("TileSetAtlasSource_usrkp")
+sources/31 = SubResource("TileSetAtlasSource_g6fae")
+sources/32 = SubResource("TileSetAtlasSource_jq75f")
+sources/40 = SubResource("TileSetAtlasSource_g6k33")
+sources/41 = SubResource("TileSetAtlasSource_tkc8x")
+sources/42 = SubResource("TileSetAtlasSource_sal2j")
+sources/18 = SubResource("TileSetAtlasSource_e6eqo")
+sources/50 = SubResource("TileSetAtlasSource_6br4r")
+sources/60 = SubResource("TileSetAtlasSource_hcuy8")
+sources/33 = SubResource("TileSetAtlasSource_eexm0")
+sources/70 = SubResource("TileSetAtlasSource_2xcs3")
+sources/71 = SubResource("TileSetAtlasSource_mcrcf")
+sources/19 = SubResource("TileSetAtlasSource_8dun3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgjql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgoq0"]
+size = Vector2(120, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36au1"]
+size = Vector2(50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tt7t"]
+atlas = ExtResource("23_beawo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3771"]
+size = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr2k6"]
+atlas = ExtResource("24_lwfpc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu0js"]
+size = Vector2(32, 32)
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(2, 2)
+script = ExtResource("1_rh0f1")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+tile_set = SubResource("TileSet_3ls76")
+rendering_quadrant_size = 64
+navigation_visibility_mode = 2
+format = 2
+layer_0/name = "Ground"
+layer_0/y_sort_enabled = true
+layer_0/z_index = -1
+layer_1/name = "Player_mode"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Walls_layer"
+layer_2/y_sort_enabled = true
+layer_2/y_sort_origin = 14
+layer_2/z_index = 1
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "FOG"
+layer_3/y_sort_enabled = true
+layer_3/z_index = 3
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "Neww"
+layer_4/tile_data = PackedInt32Array()
+
+[node name="GUI_Canvas" type="CanvasLayer" parent="."]
+script = ExtResource("7_wkt74")
+
+[node name="GUI" type="ColorRect" parent="GUI_Canvas"]
+texture_filter = 1
+offset_left = 158.0
+offset_top = 2.0
+offset_right = 680.0
+offset_bottom = 38.0
+scale = Vector2(1.2, 1.2)
+color = Color(0, 0, 0, 0)
+
+[node name="MP_BAR" type="ColorRect" parent="GUI_Canvas/GUI"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 25.0
+offset_right = 94.0
+offset_bottom = 61.0
+color = Color(0.27451, 0.509804, 0.784314, 1)
+
+[node name="HP" type="Label" parent="GUI_Canvas/GUI"]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -95.8333
+offset_top = -22.1667
+offset_right = -60.8333
+offset_bottom = 25.8333
+grow_vertical = 2
+scale = Vector2(2, 2.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+label_settings = SubResource("LabelSettings_lgjql")
+vertical_alignment = 1
+
+[node name="MP" type="Label" parent="GUI_Canvas/GUI"]
+visible = false
+layout_mode = 0
+offset_left = 125.0
+offset_right = 180.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("11_8te26")
+text = "MP:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="STAMINA_BAR" type="ColorRect" parent="GUI_Canvas/GUI"]
+layout_mode = 0
+offset_left = 235.833
+offset_top = 20.8333
+offset_right = 315.833
+offset_bottom = 58.8333
+color = Color(0, 0.509804, 0.168627, 1)
+
+[node name="BOSS" type="ColorRect" parent="GUI_Canvas/GUI"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 71.6666
+offset_top = 500.833
+offset_right = 781.667
+offset_bottom = 550.833
+color = Color(0.0745098, 0.0196078, 0.0745098, 1)
+
+[node name="BOSS_HP" type="ColorRect" parent="GUI_Canvas/GUI"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 77.5
+offset_top = 505.833
+offset_right = 777.5
+offset_bottom = 545.833
+color = Color(1, 0, 0, 1)
+
+[node name="BOSS2" type="Label" parent="GUI_Canvas/GUI"]
+visible = false
+layout_mode = 0
+offset_left = 352.5
+offset_top = 460.0
+offset_right = 461.5
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("11_8te26")
+text = "TEGOVIR HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TIMER" type="Sprite2D" parent="GUI_Canvas/GUI"]
+texture_filter = 1
+position = Vector2(-46, 50.833)
+scale = Vector2(0.75, 0.625)
+texture = ExtResource("17_c18ha")
+
+[node name="STAMINKA" type="Sprite2D" parent="GUI_Canvas/GUI"]
+texture_filter = 1
+position = Vector2(132, 41)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("18_usvcb")
+
+[node name="STAMINKA2" type="Sprite2D" parent="GUI_Canvas/GUI"]
+texture_filter = 1
+position = Vector2(277.5, 40.8333)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("19_iklgu")
+
+[node name="STAMINKA3" type="Sprite2D" parent="GUI_Canvas/GUI"]
+texture_filter = 1
+position = Vector2(854.167, 111.667)
+texture = ExtResource("20_ujpql")
+
+[node name="PLAYER" type="Label" parent="GUI_Canvas/GUI/STAMINKA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -187.0
+offset_right = 70.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 34
+text = "Cherez 
+Les"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZXC1" type="Label" parent="GUI_Canvas/GUI/STAMINKA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.667
+offset_top = -92.8333
+offset_right = -7.66666
+offset_bottom = -12.8333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "Z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZXC2" type="Label" parent="GUI_Canvas/GUI/STAMINKA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.1667
+offset_top = -92.8333
+offset_right = 94.8333
+offset_bottom = -12.8333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZXC3" type="Label" parent="GUI_Canvas/GUI/STAMINKA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -44.5
+offset_right = 44.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "X
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZXC4" type="Label" parent="GUI_Canvas/GUI/STAMINKA3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -142.0
+offset_right = 44.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "X
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="GUI_Canvas"]
+visible = false
+clip_contents = true
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -272.0
+offset_top = 40.0
+offset_right = -72.0
+offset_bottom = 240.0
+grow_horizontal = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="GUI_Canvas/Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="GUI_Canvas/Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 0
+
+[node name="Mini" type="Node2D" parent="GUI_Canvas/Control/SubViewportContainer/SubViewport"]
+visible = false
+
+[node name="MiniChar" type="Sprite2D" parent="GUI_Canvas/Control/SubViewportContainer/SubViewport/Mini"]
+z_index = 1
+scale = Vector2(4, 4)
+texture = ExtResource("14_lhc7a")
+
+[node name="Camera2D" type="Camera2D" parent="GUI_Canvas/Control/SubViewportContainer/SubViewport/Mini/MiniChar"]
+zoom = Vector2(0.05, 0.05)
+
+[node name="MiniMap" type="TileMap" parent="GUI_Canvas/Control/SubViewportContainer/SubViewport/Mini"]
+tile_set = SubResource("TileSet_3ls76")
+rendering_quadrant_size = 64
+navigation_visibility_mode = 2
+format = 2
+layer_0/name = "Ground"
+layer_1/name = "Player_mode"
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+
+[node name="AlexButton" type="Button" parent="GUI_Canvas"]
+visible = false
+z_index = 3
+offset_left = 130.0
+offset_top = 60.0
+offset_right = 1099.0
+offset_bottom = 1029.0
+scale = Vector2(0.1, 0.1)
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
+keep_pressed_outside = true
+
+[node name="Label" type="Label" parent="GUI_Canvas/AlexButton"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 870.0
+offset_right = 970.0
+offset_bottom = 970.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 100
+text = "2. Alex Utkin"
+
+[node name="AndreButton" type="Button" parent="GUI_Canvas"]
+visible = false
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 992.0
+offset_bottom = 1032.0
+scale = Vector2(0.1, 0.1)
+mouse_default_cursor_shape = 2
+
+[node name="Label" type="Label" parent="GUI_Canvas/AndreButton"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 870.0
+offset_right = 970.0
+offset_bottom = 970.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 100
+text = "1. Andrew Kulek"
+
+[node name="Timer" type="Timer" parent="GUI_Canvas"]
+process_callback = 0
+wait_time = 50.0
+
+[node name="PUSHING" type="Label" parent="GUI_Canvas"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -155.0
+offset_top = -123.0
+offset_right = 155.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "НАЖМИТЕ \"F\", ЧТОБЫ ОТКРЫТЬ ДВЕРЬ"
+
+[node name="Virtual Joystick" parent="GUI_Canvas" instance=ExtResource("22_7lci4")]
+visibility_mode = 1
+
+[node name="Virtual Joystick2" parent="GUI_Canvas" instance=ExtResource("22_7lci4")]
+offset_left = 982.0
+offset_top = -302.0
+offset_right = 1282.0
+offset_bottom = -2.0
+visibility_mode = 1
+action_left = "attack_left"
+action_right = "attack_right"
+action_up = "attack_up"
+action_down = "attack_down"
+
+[node name="Run" type="TouchScreenButton" parent="GUI_Canvas"]
+position = Vector2(878, 616)
+texture_normal = ExtResource("19_iklgu")
+shape = SubResource("RectangleShape2D_rgoq0")
+action = "Shift"
+visibility_mode = 1
+
+[node name="Run" type="TouchScreenButton" parent="GUI_Canvas/Run"]
+position = Vector2(323, -197)
+texture_normal = ExtResource("23_l8136")
+shape = SubResource("RectangleShape2D_36au1")
+action = "Act"
+visibility_mode = 1
+
+[node name="AlexButton2" type="TouchScreenButton" parent="GUI_Canvas"]
+texture_filter = 1
+position = Vector2(15, 247)
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_5tt7t")
+shape = SubResource("RectangleShape2D_m3771")
+action = "Shift"
+
+[node name="AndrewButton" type="TouchScreenButton" parent="GUI_Canvas"]
+texture_filter = 1
+position = Vector2(14.9999, 141)
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_lr2k6")
+shape = SubResource("RectangleShape2D_uu0js")
+action = "Andrew"
+
+[node name="IND" type="Label" parent="GUI_Canvas/AndrewButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.3333
+offset_top = -8.0
+offset_right = 139.667
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IND2" type="Label" parent="GUI_Canvas/AndrewButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.6666
+offset_top = 27.0
+offset_right = 139.333
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("11_8te26")
+theme_override_font_sizes/font_size = 24
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Active" type="Sprite2D" parent="GUI_Canvas"]
+texture_filter = 1
+position = Vector2(111, 141)
+scale = Vector2(2, 2)
+texture = ExtResource("14_lhc7a")
+
+[node name="MainMusicws" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_kkpxa")
+volume_db = -3.276
+
+[node name="Anima" type="AnimationPlayer" parent="."]
+root_node = NodePath("../MainMusicws")
+
+[node name="AndreiKulek" parent="." instance=ExtResource("18_7pmwp")]
+
+[node name="Camera2D" type="Camera2D" parent="AndreiKulek"]
+zoom = Vector2(2, 2)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+
+[node name="AlexandrUtkin" parent="." instance=ExtResource("15_avgrh")]
+
+[node name="Camera2D" type="Camera2D" parent="AlexandrUtkin"]
+enabled = false
+zoom = Vector2(2, 2)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
+scale = Vector2(1.71, 1)
+energy = 0.7
+texture = ExtResource("20_lhdn5")
+texture_scale = 0.5
+
+[node name="Bossfight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_6mddb")
+
+[node name="MainMusic" parent="." instance=ExtResource("23_yp6ig")]
+
+[connection signal="mouse_entered" from="GUI_Canvas/AlexButton" to="." method="_on_alex_button_mouse_entered"]
+[connection signal="mouse_exited" from="GUI_Canvas/AlexButton" to="." method="_on_alex_button_mouse_exited"]
+[connection signal="pressed" from="GUI_Canvas/AlexButton" to="." method="_on_alex_button_pressed"]
+[connection signal="mouse_entered" from="GUI_Canvas/AndreButton" to="." method="_on_andre_button_mouse_entered"]
+[connection signal="mouse_exited" from="GUI_Canvas/AndreButton" to="." method="_on_andre_button_mouse_exited"]
+[connection signal="pressed" from="GUI_Canvas/AndreButton" to="." method="_on_andre_button_pressed"]
+[connection signal="timeout" from="GUI_Canvas/Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="MainMusicws" to="." method="_on_main_music_finished"]

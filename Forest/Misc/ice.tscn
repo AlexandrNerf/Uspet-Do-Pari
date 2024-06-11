@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://daqf0ktpecihh"]
+
+[ext_resource type="Texture2D" uid="uid://o41uhlyqoptd" path="res://Forest/Sprites/Ice_floor_1.png" id="1_dkfql"]
+
+[node name="Ice" type="Sprite2D"]
+z_as_relative = false
+texture_filter = 1
+texture = ExtResource("1_dkfql")
+
+[node name="Area" type="Area2D" parent="." groups=["Ice"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area"]
+polygon = PackedVector2Array(-32, 0, 0, -18, 32, 0, 0, 18)

@@ -1,0 +1,6 @@
+join AlexandrUntik 1
+AlexandrUntik: Ура, мы закрылись на 5!
+join AndreiKulek 3
+AndreiKulek: Это была потная катка. Но теперь можно спокойно ехать домой и спать.
+AlexandrUntik: Ну а вам там всем пора бы честно признать, что вам это даже понравилось.
+[signal arg="THEEND"]
