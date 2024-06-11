@@ -3,7 +3,7 @@ name: my workflow
 on:
   push:
     branches:
-      - '*'
+      - '1.1v'
       - '!master'
 jobs:
   test:
