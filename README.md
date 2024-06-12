@@ -31,6 +31,8 @@ Game genres: roguelike, fantasy, action, pixel, isometric.
 
 > To start this game use insturction bellow in module "Start Game".
 
+## Git struct 
+
 On each branch you can see different versions of the game. Main branch contains compiled html5 game files and this README. 
 
 ### Main scripts of game starting and processing is ***node_2d, presents and main_menu .tscn*** files. 
