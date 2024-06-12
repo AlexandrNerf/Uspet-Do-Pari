@@ -56,4 +56,4 @@ On each branch you can see different versions of the game. Main branch contains 
 For more information about code - go to branches with actual version
 
 # Changelog
-You can find any version changes in ***CHANGELOG*** file
+You can find any version changes in ***Changelog*** part of ***README.md*** file in other branches
