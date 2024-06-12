@@ -1,0 +1,21 @@
+
+@media (max-aspect-ratio: 1/1)
+{
+  .back_board
+  {
+    background-image: url(../images/view_size_9_16/Консалтинг\ Back\ Board.svg);
+  }
+  .back_board-chips_back
+  {
+    background-image: url(../images/view_size_9_16/Консалтинг\ Back\ Board\ Chips\ Back.svg);
+  }
+  .back_board-chips
+  {
+    background-image: url(../images/view_size_9_16/Консалтинг\ Back\ Board\ Chips.svg);
+  }
+
+  .main-logo-info
+  {
+    display: flex;
+  }
+}
