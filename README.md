@@ -50,7 +50,7 @@ On each branch you can see different versions of the game. Main branch contains 
 ### To start game you have 2 choices:
 
 1. ***GitHub Pages (Recommended)***
-- Just run https://alexandrnerf.github.io/Uspet-Do-Pari site and don't care about running.
+- Just run https://alexandrnerf.github.io/Uspet-Do-Pari or https://uspet-do-pari.proffloud.ru site and don't care about running.
 
 2. ***Run on your own server***
 - To do this - download _main_ branch and start server.py, then go to ***localhost:8000*** and run game with file ***USPET_DO_PARI.html***.
