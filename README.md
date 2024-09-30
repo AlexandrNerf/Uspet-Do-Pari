@@ -13,9 +13,9 @@ Game genres: roguelike, fantasy, action, pixel, isometric.
 
 # Authors: 
 
-### Alexandr Varnakin (Back-end)
+Alexandr Varnakin (Back-end)
 
-### Andrew Dutkin (Front-end)
+Andrew Dutkin (Front-end)
 
 # Duties:
 
